@@ -1,0 +1,96 @@
+// Define user defined scss functions here
+// These functions are reusable across all scss files as long as you import it
+// Sample Import: 
+// @import '@/styles/base/mixins.scss';
+
+// Declare variables for font
+$font-size: 12px !default;
+
+// Fonts
+@mixin font-base($font-size) {
+  font-size: $font-size;
+}
+
+@mixin font-light($font-size: $font-size) {
+  @include font-base($font-size);
+  font-weight: 300;
+}
+
+@mixin font-regular($font-size: $font-size) {
+  @include font-base($font-size);
+  font-weight: 400;
+}
+
+@mixin font-medium($font-size: $font-size) {
+  @include font-base($font-size);
+  font-weight: 500;
+}
+
+@mixin font-semi-bold($font-size: $font-size) {
+  @include font-base($font-size);
+  font-weight: 600;
+}
+
+@mixin font-bold($font-size: $font-size) {
+  @include font-base($font-size);
+  font-weight: 700;
+}
+
+// Flex
+@mixin flex($justify-content, $align-center, $flex-column) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-center;
+  flex-direction: $flex-column;
+}
+
+// Padding and Margins
+@mixin margin($margin-top: 0, $margin-right: 0, $margin-bottom: 0, $margin-left: 0) {
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+}
+  
+@mixin margin-all($margin: 0) {
+  @include margin($margin, $margin, $margin, $margin);
+}
+  
+@mixin margin-xy($margin-left-right: 0, $margin-top-bottom: 0) {
+  @include margin($margin-top-bottom, $margin-left-right, $margin-top-bottom, $margin-left-right);
+}
+  
+@mixin padding($padding-top: 0, $padding-right: 0, $padding-bottom: 0, $padding-left: 0) {
+  padding-top: $padding-top;
+  padding-right: $padding-right;
+  padding-bottom: $padding-bottom;
+  padding-left: $padding-left;
+}
+  
+@mixin padding-all($padding: 0) {
+  @include padding($padding, $padding, $padding, $padding);
+}
+  
+@mixin padding-xy($padding-left-right: 0, $padding-top-bottom: 0) {
+  @include padding($padding-top-bottom, $padding-left-right, $padding-top-bottom, $padding-left-right);
+}
+
+@mixin background-position-size($background-position: center, $background-size: cover) {
+  background-position: $background-position !important;
+  background-size: $background-size !important;
+}
+
+@mixin background-image($image-name, $url: $url, $ext: '.jpg', $fixed: true) {
+  background: url($url + $image-name + $ext) 0 0 no-repeat;
+  @include background-position-size();
+
+  @if $fixed == true {
+    background-attachment: fixed;
+  }
+}
+
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+  

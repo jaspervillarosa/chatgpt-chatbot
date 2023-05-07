@@ -1,0 +1,48 @@
+// Define colors here
+// These colors can be called in any scss files as long as you import it.
+// Sample Import: 
+// @import '@/styles/base/colors.scss';
+
+$black: #000;
+$white: #fff;
+$white-2: rgba(255,255,255,0.75);
+$white-3: #f4f4f6;
+$white-4: #f5f5f5;
+$white-5: #eeeeee;
+$white-6: #f6f6f6;
+$light-grey-1: #d9d9d9;
+$light-grey-2: #f7f7f7;
+$grey-1: #7A7A7A;
+$grey-2: #8d8ea5;
+$grey-3: #a3a3a5;
+$grey-4: #afb0c0;
+$grey-5: #949494;
+
+$dark-grey-1: #171717;
+$dark-grey-2: #272727;
+$dark-grey-3: #0d0d0d;
+$dark-grey-4: #262626;
+$dark-grey-5: #4d4d4d;
+$dark-grey-6: #333333;
+$dark-grey-7: #1f1f1f;
+$dark-grey-8: #666666;
+$pink-1: #EA3692;
+$pink-2: #df338a;
+$pink-3: #eb3692;
+
+$light-purple-1: #ebe7f1;
+
+$green-1: #befc7f;
+$blue-1: #1a1e4c;
+$blue-2: rgba(26,30,76, 0.8);
+$blue-3: #123075;
+$blue-4: #2575fc;
+$blue-5: #3d4067;
+$yellow-1: #c69935;
+$yellow-2: #d6aa45;
+
+$facebook-color: #3b5998;
+$twitter-color: #00acee;
+$whatsapp-color: #25D366;
+
+$general-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;

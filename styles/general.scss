@@ -1,0 +1,120 @@
+@import '@/styles/base/colors.scss';
+@import '@/styles/base/mixins.scss';
+@import '@/styles/base/dimensions.scss';
+
+.general {
+  &-container {
+    @include width-height(100%, 100vh);
+    @include padding-xy(100px, 50px);
+    background-color: #F1F6F9;
+
+    @media (max-width: $max-mobile-width-sm) {
+      @include padding-xy(20px, 20px);
+    }
+  }
+
+  &-input {
+    @include font-light(12px);
+    @include padding-xy(20px, 10px);
+    border-radius: 20px;
+    width: 100%;
+    border: 1px solid lightgray;
+    outline: none;
+
+    &-container {
+      @include flex(center, center, row);
+      gap: 10px;
+    }
+  }
+
+  &-button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+
+  &-chat {
+    overflow: auto;
+    max-height: 85vh;
+    min-height: 85vh;
+    padding: 10px;
+
+    &-text {
+      @include flex(center, center, row);
+      @include font-bold(30px);
+    }
+
+    &-loading {
+      @include width-height(80px, auto);
+      margin-bottom: 0px;
+
+      &-container {
+        @include flex(flex-end, center, row);
+        margin-bottom: 0px;
+      }
+    }
+
+    &-container {
+      @include flex(flex-end, flex-end, column);
+      @include font-bold(30px);
+      @include width-height(100%, auto);
+      overflow: auto !important;
+      margin-bottom: 20px;
+      margin-bottom: -10px;
+
+      &-blank {
+        @include flex(center, center, row);
+        width: 100%;
+      }
+    }
+
+    &-sender {
+      @include flex(flex-end, center, row);
+      @include padding-all(10px);
+      @include font-light(14px);
+      border-radius: 10px;
+      background-color: #394867;
+      max-width: 400px;
+      color: white;
+
+      @media (max-width: $max-mobile-width-sm) {
+        max-width: 200px;
+        margin-top: 10px;
+      }
+
+      &-container {
+        @include flex(flex-start, center, row);
+        width: 100%;
+      }
+    }
+
+    &-receiver {
+      @include flex(flex-end, center, row);
+      @include padding-all(10px);
+      @include font-light(14px);
+      border-radius: 10px;
+      background-color: #212A3E;
+      max-width: 400px;
+      color: white;
+
+      @media (max-width: $max-mobile-width-sm) {
+        max-width: 200px;
+        margin-top: 10px;
+      }
+
+      &-container {
+        @include flex(flex-end, center, row);
+        width: 100%;
+      }
+    }
+  }
+}
+
+.general-chat::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+.general-chat::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  outline: none;
+}
