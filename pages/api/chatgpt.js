@@ -1,6 +1,6 @@
 import { Configuration, OpenAIApi } from 'openai'
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.KS_OPENAI_API_KEY,
 })
 
 const openai = new OpenAIApi(configuration)
@@ -16,10 +16,10 @@ export default async function handler(req, res) {
     model: 'text-davinci-003',
     prompt: prompt,
     max_tokens: 2048,
-    temperature: 0.8,
+    // temperature: 0.8,
   })
 
   const response =
-    chatResponse.data.choices[0].text?.trim() || "I'm offline, try again later"
+    chatResponse.data.choices[0].text || "I'm offline, try again later"
   res.status(200).json({ text: response })
 }

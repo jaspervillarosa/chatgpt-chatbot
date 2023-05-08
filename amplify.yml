@@ -6,7 +6,7 @@ frontend:
         - yarn install
     build:
       commands:
-        - (env | grep -e OPENAI_ >> .env) || true    
+        - (env | grep -e KS_ >> .env) || true    
         - yarn run build
   artifacts:
     baseDirectory: .next

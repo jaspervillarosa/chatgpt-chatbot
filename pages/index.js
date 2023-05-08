@@ -7,7 +7,6 @@ export default function Home() {
 
   const [text, setText] = useState();
   const [loading, setLoading] = useState(false);
-  const [response, setResponse] = useState('');
   const [chat, setChat] = useState([]);
 
   const generateResponse = async (data) => {
@@ -24,7 +23,6 @@ export default function Home() {
         body: JSON.stringify(data),
       });
       const response = await responseRaw.json();
-      setResponse(response.text);
       chatRaw = [
         ...chatRaw,
         response.text,
